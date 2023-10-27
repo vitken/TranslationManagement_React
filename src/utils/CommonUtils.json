@@ -1,0 +1,4 @@
+{
+    "translatorStatus": [{"name": "Applicant", "value": 0}, {"name": "Certified", "value": 1}, {"name": "Deleted", "value": 2}],
+    "jobStatus": [{"name": "New", "value": 0}, {"name": "Inprogress", "value": 1}, {"name": "Completed", "value": 2}]
+}

@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import './components/JobListComponent';
+import JobListComponent from './components/JobListComponent';
+import LayoutComponent from "./components/LayoutComponent";
+import TranslatorsComponent from "./components/TranslatorsComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LayoutComponent />}>
+          <Route index element={<JobListComponent title="Translation Jobs" />} />
+          <Route path="translators" element={<TranslatorsComponent title="Translators" />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

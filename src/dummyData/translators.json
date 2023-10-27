@@ -1,0 +1,30 @@
+[
+    {
+        "id": 111,
+        "name": "Viktor Test1",
+        "hourlyRate": 22.50,
+        "status": 1,
+        "creditCardNumber": 4111000011111100
+    },
+    {
+        "id": 112,
+        "name": "Viktor Test2",
+        "hourlyRate": 15,
+        "status": 0,
+        "creditCardNumber": 4111006535111100
+    },
+    {
+        "id": 121,
+        "name": "Viktor Test3",
+        "hourlyRate": 38.40,
+        "status": 2,
+        "creditCardNumber": 4111000011113450
+    },
+    {
+        "id": 211,
+        "name": "Viktor Test4",
+        "hourlyRate": 22.20,
+        "status": 0,
+        "creditCardNumber": 4111000654111100
+    }
+]

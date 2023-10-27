@@ -1,0 +1,18 @@
+[
+    {
+        "Id": 1,
+        "CustomerName": "Customer 1",
+        "Status": 1,
+        "OriginalContent": "some conteeent 132 ifnsdoigsdngsiodn",
+        "TranslatedContent": "",
+        "Price": 25.38
+    },
+    {
+        "Id": 2,
+        "CustomerName": "Customer 2",
+        "Status": 3,
+        "OriginalContent": "some conteeent 132 ifnsdoigsdngsiodn",
+        "TranslatedContent": "Nejaky prelozeny obsah 12415 fuisgisgseiogs",
+        "Price": 27.98
+    }
+]
