@@ -1,0 +1,1 @@
+#Sorry, the frontend app is not well-written as I wanted to more fine-tune backend. to run this app, simply run 'npm start' from (ideally) Node.js console in the current folder
