@@ -304,7 +304,10 @@ export class Client {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "text/plain"
+                "Accept": "text/plain",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With"
             }
         };
 

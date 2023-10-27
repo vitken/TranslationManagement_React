@@ -34,7 +34,7 @@ function TranslatorStatusComponent(props) {
         setMessage({"color": "red", "text": "Translator doesn't exists!"});
     }
     
-    props.handleStatusChange(true);
+    props.handleChange(true);
   }
 
   return (

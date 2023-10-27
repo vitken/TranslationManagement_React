@@ -3,6 +3,7 @@ import "./Global.css";
 import translatorsDummy from "../dummyData/translators";
 import {Client} from "../api/TranslationApiClient.ts";
 import TranslatorStatusComponent from "./TranslatorStatusComponent";
+import TranslatorCreateComponent from "./TranslatorCreateComponent";
 
 function TranslatorsComponent(props) {
   const tableHeadings = [
@@ -16,7 +17,12 @@ function TranslatorsComponent(props) {
   const [translators, setTranslators] = useState([]);
 
   const loadTranslators = async () => {
-    var fetchedTranslators = await apiClient.getTranslators();
+    var fetchedTranslators = [];
+    try {
+        fetchedTranslators = await apiClient.getTranslators();
+    } catch (error) {
+        console.log("Colud noit get translators!");
+    }
     if (fetchedTranslators){
       setTranslators(translatorsDummy.concat(fetchedTranslators));
     }
@@ -32,7 +38,7 @@ function TranslatorsComponent(props) {
     }, 1000);
   }, []);
 
-  const handleStatusChange = async (statusChangeOk) => {
+  const handleChange = async (statusChangeOk) => {
     if (statusChangeOk === true){
         await loadTranslators();
     }
@@ -69,7 +75,8 @@ function TranslatorsComponent(props) {
           )}
         </tbody>
       </table>
-      <TranslatorStatusComponent translators={translators} handleStatusChange={handleStatusChange} />
+      <TranslatorStatusComponent translators={translators} handleChange={handleChange} />
+      <TranslatorCreateComponent handleChange={handleChange} />
     </div>
   );
 }
